@@ -21,7 +21,7 @@ It was made in a sudden urge to see how the app might have looked like, if I glu
 
 This recreation is obviously unrelated to Domino's Japan. It has no intention to help you buy pizzas either. 
 
-Unfortunately most functionality do not work yet. (>_<) (and it's pretty hard to replicate the AR features.) 
+Unfortunately most functionality do not work yet. (>_<) (and it's pretty hard to replicate the AR features. They use a very old version of Vuforia if I remember correctly.) 
 
 All rights to the resources in this belong to their respective owners.
 このアプリの再現は実際のドミノ・ピザとは一切関係ありません。
