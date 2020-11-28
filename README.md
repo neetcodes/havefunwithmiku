@@ -1,4 +1,4 @@
-# havefunwithmiku
+# havefunwithmiku  ![](https://raw.githubusercontent.com/neetcodes/havefunwithmiku/main/favicon.ico)
 
 So, I tried to recreate the Domino's Japan X Hatsune Miku iPhone app in HTML.
 
