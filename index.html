@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Miku</title>
+    <script type="text/javascript">
+        let playing = false;
+        let currentTrack = 0;
+        function get_to_main_screen(e) {
+            document.getElementById("splash").style.display = "none";
+            document.getElementById("tabbar").style.display = "inline";
+            launch("tab_tracking", "mikuplayer");
+        }
+        function play(e) {
+            playing = true;
+            document.getElementById("a_music" + String(currentTrack)).style.display="inline";
+            document.getElementById("musicplay").style.display="none";
+            document.getElementById("music" + String(currentTrack)).play();
+            document.getElementById("disc_tracking").style.animationPlayState="running";
+        }
+        function pause(e) {
+            playing = false;
+            document.getElementById("a_music" + String(currentTrack)).style.display="none";
+            document.getElementById("musicplay").style.display="inline";
+            document.getElementById("music" + String(currentTrack)).pause();
+            document.getElementById("disc_tracking").style.animationPlayState="paused";
+        }
+        function launch(newtab, newdiv) {
+            divlist = ["mikuplayer", "main", "livestage"];
+            tablist = ["tab_order", "tab_coupon", "tab_game", "tab_tracking"];
+            divlist.filter(div => {
+                document.getElementById(div).style.display="none";
+            });
+            [0,1,2,3].filter(i => {
+                document.getElementsByClassName("tabselectgloss")[i].style.display="none";
+            });
+            document.getElementById(newdiv).style.display="inline";
+            document.getElementById(newtab).getElementsByClassName("tabselectgloss")[0].style.display="inline";
+        }
+        function switchsong(n) {
+            statuslist = ["topping", "firing", "finishing", "delivering"];
+            [0,1,2,3].filter(i => {
+                document.getElementById("img_status_"+statuslist[i]).style.visibility="hidden";
+                document.getElementById("music"+String(i)).pause();
+                document.getElementById("music"+String(i)).currentTime=0;
+                document.getElementById("a_music" + String(i)).style.display="none";
+
+            });
+            document.getElementById("img_status_"+statuslist[n]).style.visibility="visible";
+
+            currentTrack = n;
+            if (playing) {
+                document.getElementById("music"+String(n)).play();
+                document.getElementById("a_music" + String(n)).style.display="inline";
+            } 
+        }
+
+            
+        function removeclickevent() {
+            document.removeEventListener('click', playsplash);
+            console.log("removed event listener");
+        }
+        function playsplash() {
+            document.getElementById("splash").play();
+        }
+        document.addEventListener('click', playsplash);
+    </script>
+    <style type="text/css">
+    /*body {
+        background: url("background@2x.png");
+    }*/
+    .btn {
+        position: absolute;
+    }
+    .btn_h {
+        position: absolute;
+        display: none;
+    }
+    a:hover .btn {
+        display: none;
+    }
+    a:hover .btn_h {
+        display: block;
+    }
+    #icon_new {
+        position: absolute;
+        left: 45px;
+        top: 535px;                
+        z-index: 10;
+    }
+    .btn_wallpaper {
+        left: 60px;
+        top: 500px;                
+    }
+    .btn_camera_park {
+        left: 10px;
+        top: 600px;                
+    }
+    .btn_livestage_park {
+        left: 60px;
+        top: 700px;                
+    }
+    .btn_making_park {
+        left: 10px;
+        top: 800px;                
+    }
+    .btn_music {
+        left: 10px;
+        top: 715px;                
+    }
+    #disc_tracking {
+        position: absolute;
+        top: 170px;
+        left: 67px;
+        animation:rotation 8s linear infinite;
+        animation-play-state: paused;
+    }
+    .img_status {
+        position: absolute;
+        visibility: hidden;
+    }
+    .statusdiv {
+        position: absolute;
+        top: 8px;
+        width: 148px;
+        height: 80px;
+    }
+    #img_status_topping {
+        visibility: visible;
+    }
+    #status_topping {
+        left: 8px;
+    }
+    #status_firing {
+        left: 156px;
+    }
+    #status_finishing {
+        left: 304px;
+    }
+    #status_delivering {
+        left: 452px;
+    }
+    #main {
+        position: absolute;
+        top: 86px;
+    }
+    #tabbar {
+        position: absolute;
+        top: 1000px;
+        left: 0px;
+        margin-left: inherit;
+        height: 98px;
+        width: 640px;
+        background: black;
+        border-top: inset 3px #aaaaaa;
+    }
+    #tabbar:before{
+        content:'';
+        position:absolute;
+        width:100%;
+        height:50%;
+        background:rgba(255,255,255,0.15);
+        background:
+            linear-gradient(
+            top,
+            rgba(255,255,255,0.1),
+            rgba(255,255,255,0.15)
+            );
+    }
+
+    #navbar {
+        position: absolute;
+        top: -86px;
+        left: 0px;
+        height: 86px;
+        width: 640px;
+        z-index: 20;
+    }
+    #navbar_img {
+        height: 149px;
+        width: 657px;
+        margin-left: -8px;
+        margin-top: -26px;
+    }
+    .tab {
+        position: relative;
+        height:98px;
+        width:160px;
+    }
+    .tabselectgloss{
+        display: none;
+        position:absolute;
+        width:97%;
+        height:97%;
+        background:rgba(255,255,255,0.15);
+        border-radius: 9px;
+        margin: 2px;
+        margin-left: 4px;
+    }
+    #tab_coupon {
+        top: -98px;
+        left: 160px;
+    }
+    #tab_game {
+        top: -196px;
+        left: 320px;
+    }
+    #tab_tracking {
+        top: -294px;
+        left: 480px;
+    }
+    .tabimg {
+        margin-top:8px;
+        padding-left:60px;
+    }
+    .tabtext {
+        position: absolute;
+        bottom: -20px;
+        width: inherit;
+        text-align: center;
+        color: #01c3e7;
+        font-size: 22px;
+    }
+    #livestage_youtube {
+        position: absolute;
+        top:339px;
+        left:8px;
+    }
+
+    @keyframes rotation {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(359deg);
+        }
+    }
+    </style>
+</head>
+<body>
+<video id="splash" autoplay playsinline onplay="removeclickevent()" onended="get_to_main_screen()">
+    <source src=splash.mp4>
+</video>
+<div id="main" style="display:none">
+    <div id="navbar">
+        <img id=navbar_img src="NavBarLandscape@2x1.png"/>
+    </div>
+    <img id=img_miku_4inch src="img_miku_4inch@2x.png">
+    <img id=icon_new src="icon_new@2x.png">
+    <a>
+        <img class="btn btn_wallpaper" src="btn_wallpaper@2x.png"/>
+        <img class="btn_h btn_wallpaper" src="btn_wallpaper_h@2x.png"/>
+    </a>
+    <a>
+        <img class="btn btn_camera_park" src="btn_camera_park@2x.png"/>
+        <img class="btn_h btn_camera_park" src="btn_camera_park_h@2x.png"/>
+    </a>
+    <a>
+        <img class="btn btn_livestage_park" src="btn_livestage_park@2x.png"/>
+        <img class="btn_h btn_livestage_park" onclick="launch('tab_game','livestage')" src="btn_livestage_park_h@2x.png"/>
+    </a>
+    <a>
+        <img class="btn btn_making_park" src="btn_making_park@2x.png"/>
+        <img class="btn_h btn_making_park" src="btn_making_park_h@2x.png"/>
+    </a>
+</div>
+<div id="livestage" style="display:none">
+    <img src="background@2x.png"/>
+    <iframe id=livestage_youtube width="640" height="360" src="https://www.youtube-nocookie.com/embed/HHyqT7ymWbw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div id="mikuplayer" style="display:none">
+    <img src="bg_mikuplayer@2x.png"/>
+    <div class=statusdiv id="status_topping" onclick="switchsong(0)">
+        <img src="img_status_topping_o@2x.png" class="img_status" id="img_status_topping"/>
+    </div>
+    <div class=statusdiv id="status_firing" onclick="switchsong(1)">
+        <img src="img_status_firing_o@2x.png" class="img_status" id="img_status_firing"/>
+    </div>
+    <div class=statusdiv id="status_finishing" onclick="switchsong(2)">
+        <img src="img_status_finishing_o@2x.png" class="img_status" id="img_status_finishing"/>
+    </div>
+    <div class=statusdiv id="status_delivering" onclick="switchsong(3)">
+        <img src="img_status_delivering_o@2x.png" class="img_status" id="img_status_delivering"/>
+    </div>
+    <a id=musicplay>
+        <img class="btn btn_music" onclick="play()" src="btn_play_tracking@2x.png"/>
+        <img class="btn_h btn_music"  onclick="play()" src="btn_play_tracking_on@2x.png"/>
+    </a>
+    <a id=a_music0 style="display:none">
+        <img class="btn btn_music" onclick="pause()" src="btn_music_tracking0@2x.png"/>
+        <img class="btn_h btn_music"  onclick="pause()" src="btn_music_tracking0_on@2x.png"/>
+    </a>
+    <a id=a_music1 style="display:none">
+        <img class="btn btn_music" onclick="pause()" src="btn_music_tracking1@2x.png"/>
+        <img class="btn_h btn_music"  onclick="pause()" src="btn_music_tracking1_on@2x.png"/>
+    </a>
+    <a id=a_music2 style="display:none">
+        <img class="btn btn_music" onclick="pause()" src="btn_music_tracking2@2x.png"/>
+        <img class="btn_h btn_music"  onclick="pause()" src="btn_music_tracking2_on@2x.png"/>
+    </a>
+    <a id=a_music3 style="display:none">
+        <img class="btn btn_music" onclick="pause()" src="btn_music_tracking3@2x.png"/>
+        <img class="btn_h btn_music"  onclick="pause()" src="btn_music_tracking3_on@2x.png"/>
+    </a>
+    <img src="disc_tracking@2x.png" id="disc_tracking"/>
+    <audio preload=none onended="switchsong(1);" id="music0"><source src="miku_music0.mp3"></audio>
+    <audio preload=none onended="switchsong(2);" id="music1"><source src="miku_music1.mp3"></audio>
+    <audio preload=none onended="switchsong(3);" id="music2"><source src="miku_music2.mp3"></audio>
+    <audio preload=none onended="switchsong(0);" id="music3"><source src="miku_music3.mp3"></audio>
+</div>
+<div id="tabbar" style="display:none">
+    <div class="tab" id="tab_order">
+        <div class="tabselectgloss"></div>
+        <img src="tab_order@2x.png" class="tabimg">
+        <p class=tabtext>オーダー</p>
+    </div>
+    <div class="tab" id="tab_coupon">
+        <div class="tabselectgloss"></div>
+        <img src="tab_coupon@2x.png" class="tabimg"/>
+        <p class=tabtext>MYクーポン</p>
+    </div>
+    <div class="tab" id="tab_game" onclick="launch('tab_game', 'main')">
+        <div class="tabselectgloss"></div>
+        <img src="tab_game@2x.png" class="tabimg"/>
+        <p class=tabtext>ミクパーク</p>
+    </div>
+    <div class="tab" id="tab_tracking" onclick="launch('tab_tracking', 'mikuplayer')">
+        <div class="tabselectgloss"></div>
+        <img src="tab_tracking@2x.png" class="tabimg"/>
+        <p class=tabtext>配達状況</p>
+    </div>
+</div>
+</body>
+</html>
