@@ -1,6 +1,6 @@
 # havefunwithmiku  ![](https://raw.githubusercontent.com/neetcodes/havefunwithmiku/main/favicon.ico)
 
-So, I tried to recreate the Domino's Japan X Hatsune Miku iPhone app in HTML.
+So, I tried to recreate the Domino's Japan feat. Hatsune Miku iPhone app in HTML.
 
 Try it here:
 https://neetcodes.github.io/havefunwithmiku/
@@ -24,4 +24,4 @@ This recreation is obviously unrelated to Domino's Japan. It has no intention to
 Unfortunately most functionality do not work yet. (>_<) (and it's pretty hard to replicate the AR features.) 
 
 All rights to the resources in this belong to their respective owners.
-このアプリは実際のドミノ・ピザとは一切関係ありません。
+このアプリの再現は実際のドミノ・ピザとは一切関係ありません。
