@@ -11,7 +11,11 @@ Unfortunately most functionality do not work yet. (>_<) (and it's pretty hard to
 Try it here:
 https://neetcodes.github.io/havefunwithmiku/
 
-I recommend listening to the songs in the Miku Player. You can change among the 4 songs by clicking on the status symbols on the top.
+I recommend listening to the songs in the Miku Player(4th tab). You can change among the 4 songs by clicking on the status symbols on the top.
+
+You can see the UI in Miku Park(3rd tab), and interact with it somewhat too. Try clicking "Pizza Stage LIVE". It's not the thing it should do, but I hope it entertains :).
+
+First two tabs are placeholders.
 
 All rights to the resources in this belong to their respective owners.
 このアプリは実際のドミノ・ピザとは一切関係ありません。
