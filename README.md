@@ -13,6 +13,8 @@ You can see the UI in Miku Park(3rd tab), and interact with it somewhat too. Try
 
 First two tabs are placeholders.
 
+If you want to read the code, which is short, the only file that is original is [`index.html`](https://github.com/neetcodes/havefunwithmiku/blob/main/index.html).
+
 ### Why I made this
 
 It was made in a sudden urge to see how the app might have looked like, if I glued together the resources. (that have been made public recently, thanks to the efforts detailed in a Nick Robinson video on YouTube.)
