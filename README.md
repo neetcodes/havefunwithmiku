@@ -26,5 +26,7 @@ This recreation is obviously unrelated to Domino's Japan. It has no intention to
 Unfortunately most functionality do not work yet. (>_<)
 Also it's pretty hard to replicate the AR features. They use a very old version of Vuforia if I remember correctly. I'm not sure if the resources have the data to do the show either, but I know they have the pizza box recognition data.
 
+Thanks Nick Robinson for making this legend live on.
+
 All rights to the resources in this belong to their respective owners.
 このアプリの再現は実際のドミノ・ピザとは一切関係ありません。
