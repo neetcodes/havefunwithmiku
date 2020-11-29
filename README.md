@@ -5,7 +5,7 @@ So, I tried to recreate the Domino's Japan feat. Hatsune Miku iPhone app in HTML
 Try it here:
 https://neetcodes.github.io/havefunwithmiku/
 
-You might have to click once on anywhere on the page to make the splash play.
+You might have to click once on anywhere on the page to make the splash play. And I guess you have to adjust your browser's zoom to make it fit your screen, because it has no scaling smarts.
 
 I recommend listening to the songs in the Miku Player(4th tab). You can change among the 4 songs by clicking on the status symbols on the top.
 
