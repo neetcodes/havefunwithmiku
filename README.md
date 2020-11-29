@@ -19,8 +19,6 @@ If you want to read the code, which is short, the only file that is original is 
 
 It was made in a sudden urge to see how the app might have looked like, if I glued together the resources. They have been made public a while ago, thanks to the efforts detailed in a Nick Robinson video on YouTube.
 
-This video: https://youtu.be/341IsnWdaT4
-
 Resources: https://archive.org/details/dominos-miku-1.15
 
 This recreation is obviously unrelated to Domino's Japan. It has no intention to help you buy pizzas either. 
