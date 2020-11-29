@@ -1,6 +1,7 @@
 # havefunwithmiku  ![](https://raw.githubusercontent.com/neetcodes/havefunwithmiku/main/favicon.ico)
 
 So, I tried to recreate the Domino's Japan feat. Hatsune Miku iPhone app in HTML.
+Unfortunately most functionality does not work yet. (>_<)
 
 Try it here:
 https://neetcodes.github.io/havefunwithmiku/
@@ -23,8 +24,8 @@ Resources: https://archive.org/details/dominos-miku-1.15
 
 This recreation is obviously unrelated to Domino's Japan. It has no intention to help you buy pizzas either. 
 
-Unfortunately most functionality do not work yet. (>_<)
-Also it's pretty hard to replicate the AR features. They use a very old version of Vuforia if I remember correctly. I'm not sure if the resources have the data to do the show either, but I know they have the pizza box recognition data.
+It's pretty hard to replicate the AR features. They use a very old version of Vuforia if I remember correctly. I'm not sure if the resources have the data to do the show either, but I know they have the pizza box recognition data.
+I believe the pizza ordering interface could be remade, but it would be pointless. I think I should implement the wallpaper feature at some point.
 
 Thanks Nick Robinson for making this legend live on.
 
