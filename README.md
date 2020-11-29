@@ -17,11 +17,16 @@ If you want to read the code, which is short, the only file that is original is 
 
 ### Why I made this
 
-It was made in a sudden urge to see how the app might have looked like, if I glued together the resources. (that have been made public recently, thanks to the efforts detailed in a Nick Robinson video on YouTube.)
+It was made in a sudden urge to see how the app might have looked like, if I glued together the resources. They have been made public a while ago, thanks to the efforts detailed in a Nick Robinson video on YouTube.
+
+This video: https://youtu.be/341IsnWdaT4
+
+Resources: https://archive.org/details/dominos-miku-1.15
 
 This recreation is obviously unrelated to Domino's Japan. It has no intention to help you buy pizzas either. 
 
-Unfortunately most functionality do not work yet. (>_<) (and it's pretty hard to replicate the AR features. They use a very old version of Vuforia if I remember correctly.) 
+Unfortunately most functionality do not work yet. (>_<)
+Also it's pretty hard to replicate the AR features. They use a very old version of Vuforia if I remember correctly. I'm not sure if the resources have the data to do the show either, but I know they have the pizza box recognition data.
 
 All rights to the resources in this belong to their respective owners.
 このアプリの再現は実際のドミノ・ピザとは一切関係ありません。
