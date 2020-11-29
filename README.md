@@ -12,7 +12,7 @@ I recommend listening to the songs in the Miku Player(4th tab). You can change a
 
 You can see the UI in Miku Park(3rd tab), and interact with it somewhat too. Try clicking "Pizza Stage LIVE". It's not the thing it should do, but I hope it entertains. :)
 
-First two tabs are placeholders.
+First two tabs are placeholders. They are useless for entertainment anyway, "Order" and "My Coupons".
 
 If you want to read the code, which is short, the only file that is original is [`index.html`](https://github.com/neetcodes/havefunwithmiku/blob/main/index.html).
 
